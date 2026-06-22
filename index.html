@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists API</title>
+    <script src="app.js" defer type="module"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Playlists API: Playground</h1>
+        <label for="duration">
+            Duration
+        </label>
+        <input type="time" id="duration" value="01:00:00" step="1">
+        <button type="button" commandfor="preview" command="--generate">
+            Generate
+        </button>
+        <button type="button" commandfor="documentation" command="show-modal">
+            Documentation
+        </button>
+        <button type="button" commandfor="about" command="show-modal">
+            About
+        </button>
+    </header>
+    <aside id="explorer">
+        <table>
+            <caption>Dummy database</caption>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>category</th>
+                    <th>alias</th>
+                    <th>title</th>
+                    <th>artists</th>
+                    <th>duration</th>
+                    <th>tags</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </aside>
+    <main id="editor">
+        <textarea></textarea>
+        <div class="rich-editor"></div>
+    </main>
+    <aside id="preview">
+        <p>
+            Playlist is empty, for now!
+        </p>
+        <template id="playlist-item" type="text/html">
+            <li class="playlist-item">
+                <div class="playlist-item__title" part="title"></div>
+                <div class="playlist-item__artists" part="artists"></div>
+                <div class="playlist-item__duration" part="duration"></div>
+                <div class="playlist-item__time" part="time"></div>
+            </li>
+        </template>
+    </aside>
+
+    <dialog id="documentation">
+        <header>
+            <h2>Documentation</h2>
+            <button type="button" commandfor="documentation" command="close">Close</button>
+        </header>
+
+        <div class="dialog-content">
+            <h2>Audio files definition</h2>
+            <p>
+                An audio file is defined by the following fields:
+            </p>
+            <dl>
+                <dt><code>id</code></dt>
+                <dd>The unique ID of the audio file</dd>
+                <dt><code>category</code></dt>
+                <dd>The category of the audio file (similar to a folder where the file is)</dd>
+                <dt><code>alias</code></dt>
+                <dd>A unique alias to easily get the file when querying it</dd>
+                <dt><code>title</code></dt>
+                <dd>The title of the audio file</dd>
+                <dt><code>artists</code></dt>
+                <dd>The list of artists of the audio file</dd>
+                <dt><code>duration</code></dt>
+                <dd>The duration of the file (between mix points)</dd>
+                <dt><code>tags</code></dt>
+                <dd>The list of tags of the audio files</dd>
+            </dl>
+            <h2>Querying the database</h2>
+            <p>
+                You may use the <code>file</code> querrier to get a file, specifing the filters inside the backticks (<code>`...`</code>).
+            </p>
+            <p>
+                The following examples shows how to get the file by its id or its alias:
+            </p>
+            <pre><code>jingle = file`id: 5`
+toth = file`alias: toth`</code></pre>
+            <p>
+                The <code>file</code> notation will always give only one file. If you want to get a collection of file sharing the same criteria, you may use the <code>collection</code> notation as following:
+            </p>
+            <pre><code>jingles = collection`category: jingles`</code></pre>
+            <p>
+                You may combine multiple criteria to refine your search. Note that all criteria mentionned must match to allow the file to be set in the collection:
+            </p>
+            <pre><code>songs_from_foobar = collection`
+    category: musics
+    artists: foobar
+`</code></pre>
+            <h2>Defining repeat rules</h2>
+            <p>
+                Repeat rules are rules that tell the algorithm how to pick files when it creates the playlist. It avoids a file to be choosen twice in a row for example.
+            </p>
+            <p>
+                To define repeat rules, you may use the <code>picker</code> notation as following:
+            </p>
+            <pre><code>songs_picker = picker`
+    delay_before_same_artist: 45 minutes
+    delay_before_same_file: 90 minutes
+    on_no_candidates: pick_oldest
+`</code></pre>
+            <p>
+                The criteria inside backticks may be the following:
+            </p>
+            <dl>
+                <dt><code>delay_before_same_artist</code></dt>
+                <dd>The time during when an artist cannot be picked twice</dd>
+                <dt><code>delay_before_same_file</code></dt>
+                <dd>The time during when a file cannot be picked twice</dd>
+                <dt><code>on_no_candidate<br>(NOT YET IMPLEMENTED)</code></dt>
+                <dd>When no file remains in the database (because repeat rules are too restrictive), it tells the algorithm how it can behave to pick another file.</dd>
+            </dl>
+            <p>
+                The delay indicated in <code>delay_before_same_artist</code> or <code>delay_before_same_file</code> is an expression that may use the following keywords:
+            </p>
+            <dl>
+                <dt><code>seconds</code></dt>
+                <dt><code>second</code></dt>
+                <dt><code>secs</code></dt>
+                <dt><code>sec</code></dt>
+                <dt><code>s</code></dt>
+                <dd>Seconds</dd>
+                <dt><code>minutes</code></dt>
+                <dt><code>minute</code></dt>
+                <dt><code>mins</code></dt>
+                <dt><code>min</code></dt>
+                <dt><code>m</code></dt>
+                <dd>Minutes</dd>
+                <dt><code>hours</code></dt>
+                <dt><code>hour</code></dt>
+                <dt><code>hrs</code></dt>
+                <dt><code>hr</code></dt>
+                <dt><code>hs</code></dt>
+                <dt><code>h</code></dt>
+                <dd>Hours</dd>
+                <dt><code>days</code></dt>
+                <dt><code>day</code></dt>
+                <dt><code>dys</code></dt>
+                <dt><code>dy</code></dt>
+                <dt><code>ds</code></dt>
+                <dt><code>d</code></dt>
+                <dd>Days</dd>
+                <dt><code>weeks</code></dt>
+                <dt><code>week</code></dt>
+                <dt><code>wks</code></dt>
+                <dt><code>wk</code></dt>
+                <dt><code>ws</code></dt>
+                <dt><code>w</code></dt>
+                <dd>Weeks</dd>
+                <dt><code>months</code></dt>
+                <dt><code>month</code></dt>
+                <dt><code>mons</code></dt>
+                <dt><code>mon</code></dt>
+                <dt><code>mos</code></dt>
+                <dt><code>mo</code></dt>
+                <dt><code>mths</code></dt>
+                <dt><code>mth</code></dt>
+                <dd>Months</dd>
+                <dt><code>years</code></dt>
+                <dt><code>year</code></dt>
+                <dt><code>yrs</code></dt>
+                <dt><code>yr</code></dt>
+                <dt><code>ys</code></dt>
+                <dt><code>y</code></dt>
+                <dd>Years</dd>
+            </dl>
+            <h2>Defining loops</h2>
+            <p>
+                A loop is a set of files, categories or pickers defining what kind of audio files the algorithm can choose successively.
+            </p>
+            <p>
+                You may define a loop using the following notation (using braces (<code>[...]</code>)):
+            </p>
+            <pre><code>music_rotation = [
+    jingles_picker(jingles),
+    songs_picker(songs)
+]</code></pre>
+            <p>
+                The example above defines a loop that will play a jingle following by a song, repeatedly.
+            </p>
+            <h2>Interruptions</h2>
+            <p>
+                Interruptions are everything that will interrupt the algorithm in its generation. For example, an interruption may be used to place a "Top of the Hour" at each hour change.
+            </p>
+            <p>
+                The easiest way to place a Top of the Hour in a playlist is to consider that it has to be prepared from HH:58 (considering a song may last about 2~4 minutes, so the Top of the Hour will be played between HH:58 and HH:02).
+            </p>
+            <p>
+                Here is an example of code that will play the Top of the Hour when needed:
+            </p>
+            <pre><code>prepare_toth = ({ currentRotation, queue, next }) => {
+    if (next.belongsTo`category: jingles`)
+        replace(queue, -1, toth)
+    else
+        playNext(queue, toth)
+    currentRotation.index = 1
+}
+
+when`
+    seconds: 0
+    minutes: 58`
+(prepare_toth)</code></pre>
+            <p>
+                First, we create a function that will be executed when the Top of the Hour is needed. This function checks if the next item in the playlist is a jingle and replaces it by the Top of the Hour (we do not want to play a jingle followed by the Top of the Hour) or else, it just plays the Top of the Hour next. Finally, it sets the current rotation index to 1 to ensure the next element picked will be a song (following what we defined in the music rotation, considering that the loop indexes are 0-based).
+            </p>
+            <p>
+                The <code>when</code> notation defines crieteria like an alarm-clock. The criteria may be the following:
+            </p>
+            <dl>
+                <dt><code>seconds</code></dt>
+                <dt><code>minutes</code></dt>
+                <dt><code>hours</code></dt>
+                <dd>
+                    You may define these criteria to define when the interruption will be triggered. Consider that if you do not write one of them, the algorithm will consider that all <code>seconds</code>, <code>minutes</code> or <code>hours</code> are valid. That's how, for the example of the Top of the Hour above, <code>hours</code> is not defined, so it is triggered each hour.<br>
+                    You may define a range using a hyphen: <code>10-20</code> (all between 10 to 20), or specific values using commas: <code>10,20,30</code> (only at 10, 20, and 30).<br>
+                    You may also tells something like "every 5 (hours or minutes or seconds)" using this notation: <code>*/5</code>.
+                </dd>
+                <dt><code>days_of_month</code></dt>
+                <dd>Like <code>seconds</code>, <code>minutes</code>, and <code>hours</code>, defines the days of the month (from 1 to 31).</dd>
+                <dt><code>months</code></dt>
+                <dd>Defines the months (from 1 to 12, or using aliases like JAN-DEC)</dd>
+                <dt><code>days_of_week</code></dt>
+                <dd>Defines the days of the week (from 0 to 7, 0 and 7 are both for Sunday, or using aliases like SUN-SAT)</dd>
+            </dl>
+            <h2>Then, let's play!</h2>
+            <p>
+                To finish, you may indicate the algorithm what will be his main loop it will work with:
+            </p>
+            <pre><code>run(music_rotation)</code></pre>
+        </div>
+    </dialog>
+
+    <dialog id="about">
+        <header>
+            <h2>About</h2>
+            <button type="button" commandfor="about" command="close">Close</button>
+        </header>
+
+        <div class="dialog-content">
+            <p>
+                This demo shows how musical playlists (for radio stations, for example) can be generated programmatically.
+            </p>
+            <p>
+                Using a fictional database, the application allows you to define playlist generation rules in the central editor. Clicking the generation button creates a fictional playlist based on the data from that database.
+            </p>
+            <p>
+                In this demonstration, I wanted to focus heavily on the user experience. The scripting language is nothing more, nothing less than JavaScript. However, the syntax choices I made for this playlist generation language aim to make playlist programming accessible even to people who are not familiar with software development.
+            </p>
+        </div>
+    </dialog>
+</body>
+</html>

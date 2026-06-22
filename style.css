@@ -1,0 +1,263 @@
+:root {
+    background-color: Canvas;
+    block-size: 100%;
+    color: CanvasText;
+    color-scheme: dark light;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    inline-size: 100%;
+    line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font: inherit;
+    line-height: inherit;
+}
+
+body {
+    block-size: 100%;
+    display: grid;
+    grid-template-areas:
+        "header   header header "
+        "explorer editor preview"
+    ;
+    grid-template-columns: 25rem auto 25rem;
+    grid-template-rows: auto 1fr;
+    margin: 0;
+}
+
+header {
+    align-items: stretch;
+    background-color: oklch(from Canvas calc(l - 0.1) c h);
+    display: flex;
+    gap: 1rem;
+    grid-area: header;
+    padding: 1rem;
+}
+
+h1,
+h2 {
+    align-self: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0 auto 0 0;
+}
+
+button {
+    appearance: none;
+    background-color: AccentColor;
+    border: none;
+    border-radius: 0.5rem;
+    color: AccentColorText;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+aside {
+    background-color: oklch(from Canvas calc(l - 0.05) c h);
+}
+
+textarea {
+    display: none;
+}
+
+.rich-editor {
+    background-color: transparent;
+    block-size: 100%;
+    border: none;
+    display: block;
+    font-family: monospace;
+    font-size: 1.125rem;
+    inline-size: 100%;
+    overflow-block: auto;
+    padding: 1rem;
+    resize: none;
+}
+
+#explorer {
+    grid-area: explorer;
+    overflow: auto;
+}
+
+#explorer table caption {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: start;
+}
+
+#explorer table thead {
+    inset-block-start: 0;
+    position: sticky;
+}
+
+#explorer table th {
+    background-color: Canvas;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: start;
+}
+
+#explorer table td {
+    background-color: oklch(from var(--cat-color) 0.2 0.2 h);
+    padding: 0.5rem;
+    white-space: nowrap;
+}
+
+#explorer table tr:nth-child(odd) td {
+    background-color: oklch(from var(--cat-color) 0.15 0.2 h);
+}
+
+#editor {
+    grid-area: editor;
+    min-block-size: 0;
+}
+
+#preview {
+    grid-area: preview;
+    min-block-size: 0;
+    overflow-block: auto;
+}
+
+#preview p {
+    align-content: center;
+    block-size: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+dialog {
+    border: none;
+    border-radius: 0.5rem;
+    inline-size: 100%;
+    max-inline-size: min(calc(100dvi - 3rem), 60rem);
+    padding: 0;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(1em);
+}
+
+.dialog-content {
+    padding: 1rem;
+}
+
+label {
+    align-content: center;
+    font-weight: bold;
+}
+
+input {
+    border: thin solid oklch(from currentColor l c h / 0.3);
+    border-radius: 0.5rem;
+    color: CanvasText;
+    padding: 0.25rem 0.75rem;
+}
+
+input:has(+ button) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+    margin-inline-end: -1rem;
+}
+
+input + button {
+    background-color: oklch(from AccentColor l c 140deg);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+}
+
+dl {
+    display: grid;
+    column-gap: 0.5rem;
+    grid-template-columns: max-content auto;
+}
+
+dt {
+    font-weight: bold;
+    grid-column: 1;
+    text-align: end;
+}
+
+dd {
+    grid-column: 2;
+    margin-inline-start: 0;
+}
+
+dd:has(+ dt) {
+    margin-block-end: 1rem;
+}
+
+code {
+    font-family: monospace;
+}
+
+#preview ol {
+    counter-reset: playlist;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.playlist-item {
+    background-color: oklch(from var(--cat-color) 0.2 0.2 h);
+    border-block-end: thin solid oklch(from currentColor l c h / 0.1);
+    counter-increment: playlist;
+    display: grid;
+    gap: 0.25rem 1rem;
+    grid-template-areas:
+        "n title   duration"
+        "n artists time    "
+    ;
+    grid-template-columns: 5ch auto max-content;
+    grid-template-rows: auto auto;
+    padding: 0.5rem;
+}
+
+/* .playlist-item:nth-child(odd) {
+    background-color: oklch(from var(--cat-color) 0.15 0.2 h);
+} */
+
+.playlist-item::before {
+    align-self: center;
+    content: counter(playlist);
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-area: n;
+    justify-content: end;
+    opacity: 0.4;
+    text-align: end;
+}
+
+.playlist-item__title {
+    font-weight: bold;
+    grid-area: title;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.playlist-item__artists {
+    grid-area: artists;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.playlist-item__duration {
+    grid-area: duration;
+    text-align: end;
+}
+
+.playlist-item__time {
+    grid-area: time;
+    opacity: 0.7;
+    text-align: end;
+}

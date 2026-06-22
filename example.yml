@@ -1,0 +1,1352 @@
+# Production
+
+- id: 0
+  alias: toth
+  title: Top of the Hour
+  artists:
+    - My Radio
+  duration: 20
+  category: production
+  tags:
+
+- id: 1
+  alias: adstarter
+  title: Ads sequence start
+  artists:
+    - My Radio
+  duration: 6
+  category: production
+  tags:
+
+- id: 2
+  alias: adender
+  title: Ads sequence end
+  artists:
+    - My Radio
+  duration: 8
+  category: production
+  tags:
+
+# Jingles
+
+- id: 3
+  alias:
+  title: Jingle "red"
+  artists:
+    - My radio
+  duration: 7
+  category: jingles
+  tags:
+
+- id: 4
+  alias:
+  title: Jingle "orange"
+  artists:
+    - My radio
+  duration: 6
+  category: jingles
+  tags:
+
+- id: 5
+  alias:
+  title: Jingle "yellow"
+  artists:
+    - My radio
+  duration: 8
+  category: jingles
+  tags:
+
+- id: 6
+  alias:
+  title: Jingle "green"
+  artists:
+    - My radio
+  duration: 8
+  category: jingles
+  tags:
+
+- id: 7
+  alias:
+  title: Jingle "cyan"
+  artists:
+    - My radio
+  duration: 8
+  category: jingles
+  tags:
+
+- id: 8
+  alias:
+  title: Jingle "blue"
+  artists:
+    - My radio
+  duration: 9
+  category: jingles
+  tags:
+
+- id: 9
+  alias:
+  title: Jingle "magenta"
+  artists:
+    - My radio
+  duration: 7
+  category: jingles
+  tags:
+
+- id: 10
+  alias:
+  title: Jingle "purple"
+  artists:
+    - My radio
+  duration: 6
+  category: jingles
+  tags:
+
+- id: 11
+  alias:
+  title: Jingle "gray"
+  artists:
+    - My radio
+  duration: 5
+  category: jingles
+  tags:
+
+- id: 12
+  alias:
+  title: Jingle "black"
+  artists:
+    - My radio
+  duration: 9
+  category: jingles
+  tags:
+
+- id: 13
+  alias:
+  title: Jingle "white"
+  artists:
+    - My radio
+  duration: 7
+  category: jingles
+  tags:
+
+# Ads
+
+- id: 14
+  alias:
+  title: Summer Refresh Campaign
+  artists:
+    - Cola Nova
+  duration: 20
+  category: ads
+  tags:
+
+- id: 15
+  alias:
+  title: Drive Safe Initiative
+  artists:
+    - National Insurance Group
+  duration: 30
+  category: ads
+  tags:
+
+- id: 16
+  alias:
+  title: Golden Crispy Burger
+  artists:
+    - Burger Kingdom
+  duration: 15
+  category: ads
+  tags:
+
+- id: 17
+  alias:
+  title: Smart Tech Special Sale
+  artists:
+    - ElectroWorld
+  duration: 25
+  category: ads
+  tags:
+
+- id: 18
+  alias:
+  title: Ultimate Streaming Deal
+  artists:
+    - CineFlex
+  duration: 10
+  category: ads
+  tags:
+
+- id: 19
+  alias:
+  title: Run Your Way Promo
+  artists:
+    - AeroSport
+  duration: 35
+  category: ads
+  tags:
+
+- id: 20
+  alias:
+  title: Midnight Coffee Break
+  artists:
+    - Bean & Co
+  duration: 20
+  category: ads
+  tags:
+
+- id: 21
+  alias:
+  title: New Season Launch
+  artists:
+    - TrendWear
+  duration: 40
+  category: ads
+  tags:
+
+- id: 22
+  alias:
+  title: Fly Away Tomorrow
+  artists:
+    - SkyHigh Airways
+  duration: 30
+  category: ads
+  tags:
+
+- id: 23
+  alias:
+  title: Crystal Clear Connection
+  artists:
+    - Apex Mobile
+  duration: 15
+  category: ads
+  tags:
+
+- id: 24
+  alias:
+  title: Eco Green Detergent
+  artists:
+    - CleanNature
+  duration: 25
+  category: ads
+  tags:
+
+- id: 25
+  alias:
+  title: Luxury Weekend Escape
+  artists:
+    - Grand Vista Hotels
+  duration: 35
+  category: ads
+  tags:
+
+- id: 26
+  alias:
+  title: Ultimate Gaming Laptop
+  artists:
+    - Matrix Computers
+  duration: 30
+  category: ads
+  tags:
+
+- id: 27
+  alias:
+  title: Back to School Deals
+  artists:
+    - OfficeStation
+  duration: 20
+  category: ads
+  tags:
+
+- id: 28
+  alias:
+  title: Fresh Squeezed Joy
+  artists:
+    - JuicePress
+  duration: 15
+  category: ads
+  tags:
+
+- id: 29
+  alias:
+  title: Your Next Dream Car
+  artists:
+    - Nexus Motors
+  duration: 40
+  category: ads
+  tags:
+
+- id: 30
+  alias:
+  title: Healthy Smile Tonight
+  artists:
+    - Dentacare
+  duration: 10
+  category: ads
+  tags:
+
+- id: 31
+  alias:
+  title: Smart Investing Made Easy
+  artists:
+    - Alpha Wealth Management
+  duration: 30
+  category: ads
+  tags:
+
+- id: 32
+  alias:
+  title: Fast Delivery Guaranteed
+  artists:
+    - SwiftPost
+  duration: 15
+  category: ads
+  tags:
+
+- id: 33
+  alias:
+  title: Pure Organic Honey
+  artists:
+    - NatureSweet
+  duration: 25
+  category: ads
+  tags:
+
+- id: 34
+  alias:
+  title: Virtual Reality Horizon
+  artists:
+    - OmniVision Tech
+  duration: 35
+  category: ads
+  tags:
+
+- id: 35
+  alias:
+  title: Warm Winter Blankets
+  artists:
+    - CozyHome
+  duration: 20
+  category: ads
+  tags:
+
+# Musics
+
+- id: 36
+  alias:
+  title: Neon Horizon
+  artists:
+    - Cyber Pulse
+  duration: 184
+  category: musics
+  tags:
+    - Synthwave
+    - Electronic
+
+- id: 37
+  alias:
+  title: Midnight Drive
+  artists:
+    - The Nightwalkers
+  duration: 215
+  category: musics
+  tags:
+    - Retrowave
+    - Pop
+
+- id: 38
+  alias:
+  title: Summer Whispers
+  artists:
+    - Luna Eclipse
+    - DJ Sunny
+  duration: 142
+  category: musics
+  tags:
+    - Deep House
+    - Dance
+
+- id: 39
+  alias:
+  title: Broken Strings
+  artists:
+    - Velvet Echoes
+  duration: 231
+  category: musics
+  tags:
+    - Indie Rock
+    - Alternative
+
+- id: 40
+  alias:
+  title: Golden Hour
+  artists:
+    - Soul Resonance
+  duration: 195
+  category: musics
+  tags:
+    - R&B
+    - Soul
+
+- id: 41
+  alias:
+  title: Electric Storm
+  artists:
+    - Cyber Pulse
+  duration: 168
+  category: musics
+  tags:
+    - Techno
+    - Electronic
+
+- id: 42
+  alias:
+  title: Chasing Shadows
+  artists:
+    - The Ghost Project
+  duration: 210
+  category: musics
+  tags:
+    - Ambient
+    - Cinematic
+
+- id: 43
+  alias:
+  title: Lost in Tokyo
+  artists:
+    - Neon Shifters
+  duration: 177
+  category: musics
+  tags:
+    - J-Pop
+    - Dance
+
+- id: 44
+  alias:
+  title: Concrete Jungle
+  artists:
+    - MC Lyricist
+  duration: 224
+  category: musics
+  tags:
+    - Hip-Hop
+    - Rap
+
+- id: 45
+  alias:
+  title: Ocean Breeze
+  artists:
+    - Marina Sound
+  duration: 135
+  category: musics
+  tags:
+    - Lounge
+    - Chillout
+
+- id: 46
+  alias:
+  title: Heavy Rain
+  artists:
+    - Velvet Echoes
+  duration: 199
+  category: musics
+  tags:
+    - Alternative Rock
+
+- id: 47
+  alias:
+  title: Digital Love Affair
+  artists:
+    - Cyber Pulse
+    - Luna Eclipse
+  duration: 182
+  category: musics
+  tags:
+    - Synthpop
+    - Pop
+
+- id: 48
+  alias:
+  title: Acoustic Sunset
+  artists:
+    - Ben Woods
+  duration: 154
+  category: musics
+  tags:
+    - Folk
+    - Acoustic
+
+- id: 49
+  alias:
+  title: Bassline Dropping
+  artists:
+    - Sub Low Frequency
+  duration: 202
+  category: musics
+  tags:
+    - Dubstep
+    - EDM
+
+- id: 50
+  alias:
+  title: High Stakes
+  artists:
+    - The Rockers
+  duration: 165
+  category: musics
+  tags:
+    - Hard Rock
+
+- id: 51
+  alias:
+  title: Stardust Melody
+  artists:
+    - Cosmic Orchestra
+  duration: 238
+  category: musics
+  tags:
+    - Classical
+    - Ambient
+
+- id: 52
+  alias:
+  title: Funk City
+  artists:
+    - Groove Master
+  duration: 191
+  category: musics
+  tags:
+    - Funk
+    - Disco
+
+- id: 53
+  alias:
+  title: Velvet Sky
+  artists:
+    - Luna Eclipse
+  duration: 147
+  category: musics
+  tags:
+    - Dream Pop
+
+- id: 54
+  alias:
+  title: After Hours
+  artists:
+    - Jazz Trio NY
+  duration: 221
+  category: musics
+  tags:
+    - Jazz
+
+- id: 55
+  alias:
+  title: Revolution Now
+  artists:
+    - Rebel Beats
+  duration: 173
+  category: musics
+  tags:
+    - Punk Rock
+
+- id: 56
+  alias:
+  title: Island Vibration
+  artists:
+    - Roots King
+  duration: 208
+  category: musics
+  tags:
+    - Reggae
+
+- id: 57
+  alias:
+  title: Endless Highway
+  artists:
+    - The Nightwalkers
+  duration: 189
+  category: musics
+  tags:
+    - Retrowave
+
+- id: 58
+  alias:
+  title: City of Angels
+  artists:
+    - Soul Resonance
+  duration: 214
+  category: musics
+  tags:
+    - R&B
+
+- id: 59
+  alias:
+  title: Neon Dreams
+  artists:
+    - Cyber Pulse
+  duration: 156
+  category: musics
+  tags:
+    - Synthwave
+
+- id: 60
+  alias:
+  title: Wild Fire
+  artists:
+    - Velvet Echoes
+  duration: 197
+  category: musics
+  tags:
+    - Modern Rock
+
+- id: 61
+  alias:
+  title: Smooth Sailing
+  artists:
+    - Marina Sound
+  duration: 162
+  category: musics
+  tags:
+    - Chillout
+
+- id: 62
+  alias:
+  title: Street Poets
+  artists:
+    - MC Lyricist
+    - Groove Master
+  duration: 227
+  category: musics
+  tags:
+    - Hip-Hop
+
+- id: 63
+  alias:
+  title: Forever Young
+  artists:
+    - The Pop Stars
+  duration: 181
+  category: musics
+  tags:
+    - Pop
+
+- id: 64
+  alias:
+  title: Northern Lights
+  artists:
+    - Cosmic Orchestra
+  duration: 240
+  category: musics
+  tags:
+    - Ambient
+
+- id: 65
+  alias:
+  title: Coffee Shop Chill
+  artists:
+    - Ben Woods
+  duration: 139
+  category: musics
+  tags:
+    - Acoustic
+
+- id: 66
+  alias:
+  title: Hyperdrive
+  artists:
+    - Neon Shifters
+  duration: 170
+  category: musics
+  tags:
+    - Electro House
+
+- id: 67
+  alias:
+  title: Midnight Jazz Club
+  artists:
+    - Jazz Trio NY
+  duration: 233
+  category: musics
+  tags:
+    - Jazz
+
+- id: 68
+  alias:
+  title: Blue Ocean
+  artists:
+    - Marina Sound
+  duration: 151
+  category: musics
+  tags:
+    - Lounge
+
+- id: 69
+  alias:
+  title: Underground Beats
+  artists:
+    - Sub Low Frequency
+  duration: 205
+  category: musics
+  tags:
+    - Drum & Bass
+
+- id: 70
+  alias:
+  title: Broken Promises
+  artists:
+    - Luna Eclipse
+  duration: 188
+  category: musics
+  tags:
+    - Indie Pop
+
+- id: 71
+  alias:
+  title: Runnin Free
+  artists:
+    - The Rockers
+  duration: 176
+  category: musics
+  tags:
+    - Classic Rock
+
+- id: 72
+  alias:
+  title: One More Dance
+  artists:
+    - DJ Sunny
+  duration: 193
+  category: musics
+  tags:
+    - Club
+    - EDM
+
+- id: 73
+  alias:
+  title: Retro Future
+  artists:
+    - The Nightwalkers
+  duration: 219
+  category: musics
+  tags:
+    - Synthwave
+
+- id: 74
+  alias:
+  title: Echoes of You
+  artists:
+    - Velvet Echoes
+  duration: 146
+  category: musics
+  tags:
+    - Indie Rock
+
+- id: 75
+  alias:
+  title: Deep Inside
+  artists:
+    - Soul Resonance
+  duration: 211
+  category: musics
+  tags:
+    - Soul
+
+- id: 76
+  alias:
+  title: Laser Tag
+  artists:
+    - Cyber Pulse
+  duration: 160
+  category: musics
+  tags:
+    - Electronic
+
+- id: 77
+  alias:
+  title: Floating Away
+  artists:
+    - The Ghost Project
+  duration: 228
+  category: musics
+  tags:
+    - Ambient
+
+- id: 78
+  alias:
+  title: Tokyo Nightlife
+  artists:
+    - Neon Shifters
+  duration: 185
+  category: musics
+  tags:
+    - Dance
+
+- id: 79
+  alias:
+  title: Spit Fire
+  artists:
+    - MC Lyricist
+  duration: 167
+  category: musics
+  tags:
+    - Rap
+
+- id: 80
+  alias:
+  title: Island Sun
+  artists:
+    - Roots King
+  duration: 201
+  category: musics
+  tags:
+    - Reggae
+
+- id: 81
+  alias:
+  title: Disco Fever
+  artists:
+    - Groove Master
+  duration: 194
+  category: musics
+  tags:
+    - Disco
+    - Funk
+
+- id: 82
+  alias:
+  title: Golden Fields
+  artists:
+    - Ben Woods
+  duration: 159
+  category: musics
+  tags:
+    - Folk
+
+- id: 83
+  alias:
+  title: No Control
+  artists:
+    - Rebel Beats
+  duration: 141
+  category: musics
+  tags:
+    - Punk
+
+- id: 84
+  alias:
+  title: Supernova
+  artists:
+    - Cosmic Orchestra
+  duration: 236
+  category: musics
+  tags:
+    - Cinematic
+
+- id: 85
+  alias:
+  title: Last Call
+  artists:
+    - Jazz Trio NY
+  duration: 218
+  category: musics
+  tags:
+    - Jazz
+
+- id: 86
+  alias:
+  title: Summer Love
+  artists:
+    - The Pop Stars
+    - DJ Sunny
+  duration: 172
+  category: musics
+  tags:
+    - Pop
+
+- id: 87
+  alias:
+  title: Heavyweight
+  artists:
+    - Sub Low Frequency
+  duration: 190
+  category: musics
+  tags:
+    - Dubstep
+
+- id: 88
+  alias:
+  title: Crystal Waters
+  artists:
+    - Marina Sound
+  duration: 153
+  category: musics
+  tags:
+    - Chillout
+
+- id: 89
+  alias:
+  title: Neon Rain
+  artists:
+    - Cyber Pulse
+  duration: 206
+  category: musics
+  tags:
+    - Synthwave
+
+- id: 90
+  alias:
+  title: Chasing Fireflies
+  artists:
+    - Luna Eclipse
+  duration: 178
+  category: musics
+  tags:
+    - Dream Pop
+
+- id: 91
+  alias:
+  title: Thunderstruck Town
+  artists:
+    - The Rockers
+  duration: 222
+  category: musics
+  tags:
+    - Hard Rock
+
+- id: 92
+  alias:
+  title: Ghost City
+  artists:
+    - The Ghost Project
+  duration: 213
+  category: musics
+  tags:
+    - Dark Ambient
+
+- id: 93
+  alias:
+  title: Electric Avenue
+  artists:
+    - Neon Shifters
+  duration: 164
+  category: musics
+  tags:
+    - Electro
+
+- id: 94
+  alias:
+  title: Shadows of Rock
+  artists:
+    - Velvet Echoes
+  duration: 187
+  category: musics
+  tags:
+    - Alternative Rock
+
+- id: 95
+  alias:
+  title: Urban Tales
+  artists:
+    - MC Lyricist
+  duration: 225
+  category: musics
+  tags:
+    - Hip-Hop
+
+- id: 96
+  alias:
+  title: Smooth Groove
+  artists:
+    - Soul Resonance
+  duration: 198
+  category: musics
+  tags:
+    - R&B
+
+- id: 97
+  alias:
+  title: Endless Horizon
+  artists:
+    - The Nightwalkers
+  duration: 230
+  category: musics
+  tags:
+    - Retrowave
+
+- id: 98
+  alias:
+  title: Acoustic Memories
+  artists:
+    - Ben Woods
+  duration: 148
+  category: musics
+  tags:
+    - Acoustic
+
+- id: 99
+  alias:
+  title: Club Anthem
+  artists:
+    - DJ Sunny
+  duration: 203
+  category: musics
+  tags:
+    - Dance
+
+- id: 100
+  alias:
+  title: Interstellar Journey
+  artists:
+    - Cosmic Orchestra
+  duration: 239
+  category: musics
+  tags:
+    - Space Ambient
+
+- id: 101
+  alias:
+  title: Funky Skates
+  artists:
+    - Groove Master
+  duration: 180
+  category: musics
+  tags:
+    - Funk
+
+- id: 102
+  alias:
+  title: Tropical Breeze
+  artists:
+    - Roots King
+  duration: 192
+  category: musics
+  tags:
+    - Reggae
+
+- id: 103
+  alias:
+  title: Anarchy Zone
+  artists:
+    - Rebel Beats
+  duration: 133
+  category: musics
+  tags:
+    - Punk
+
+- id: 104
+  alias:
+  title: Blue Notes
+  artists:
+    - Jazz Trio NY
+  duration: 216
+  category: musics
+  tags:
+    - Jazz
+
+- id: 105
+  alias:
+  title: Perfect Harmony
+  artists:
+    - The Pop Stars
+  duration: 171
+  category: musics
+  tags:
+    - Pop
+
+- id: 106
+  alias:
+  title: Low End Theory
+  artists:
+    - Sub Low Frequency
+  duration: 207
+  category: musics
+  tags:
+    - Bass Music
+
+- id: 107
+  alias:
+  title: Chill Waves
+  artists:
+    - Marina Sound
+  duration: 158
+  category: musics
+  tags:
+    - Chillout
+
+- id: 108
+  alias:
+  title: Cybernetic Mind
+  artists:
+    - Cyber Pulse
+  duration: 169
+  category: musics
+  tags:
+    - Techno
+
+- id: 109
+  alias:
+  title: Paper Hearts
+  artists:
+    - Luna Eclipse
+  duration: 186
+  category: musics
+  tags:
+    - Indie Pop
+
+- id: 110
+  alias:
+  title: Iron Highway
+  artists:
+    - The Rockers
+  duration: 220
+  category: musics
+  tags:
+    - Rock
+
+- id: 111
+  alias:
+  title: Echo Chamber
+  artists:
+    - The Ghost Project
+  duration: 212
+  category: musics
+  tags:
+    - Ambient
+
+- id: 112
+  alias:
+  title: Synth Symphony
+  artists:
+    - Neon Shifters
+  duration: 183
+  category: musics
+  tags:
+    - Synthpop
+
+- id: 113
+  alias:
+  title: Distant Echoes
+  artists:
+    - Velvet Echoes
+  duration: 196
+  category: musics
+  tags:
+    - Alternative
+
+- id: 114
+  alias:
+  title: Rhyme Dynamic
+  artists:
+    - MC Lyricist
+  duration: 226
+  category: musics
+  tags:
+    - Rap
+
+- id: 115
+  alias:
+  title: Late Night Mood
+  artists:
+    - Soul Resonance
+  duration: 200
+  category: musics
+  tags:
+    - Soul
+
+- id: 116
+  alias:
+  title: Midnight Run
+  artists:
+    - The Nightwalkers
+  duration: 229
+  category: musics
+  tags:
+    - Retrowave
+
+- id: 117
+  alias:
+  title: Wild Woods
+  artists:
+    - Ben Woods
+  duration: 145
+  category: musics
+  tags:
+    - Folk
+
+- id: 118
+  alias:
+  title: Dancefloor Heat
+  artists:
+    - DJ Sunny
+  duration: 204
+  category: musics
+  tags:
+    - House
+
+- id: 119
+  alias:
+  title: Nebula Clouds
+  artists:
+    - Cosmic Orchestra
+  duration: 237
+  category: musics
+  tags:
+    - Ambient
+
+- id: 120
+  alias:
+  title: Brass Connection
+  artists:
+    - Groove Master
+  duration: 179
+  category: musics
+  tags:
+    - Funk
+
+- id: 121
+  alias:
+  title: Kingston Dub
+  artists:
+    - Roots King
+  duration: 191
+  category: musics
+  tags:
+    - Reggae
+
+- id: 122
+  alias:
+  title: Riot Radio
+  artists:
+    - Rebel Beats
+  duration: 130
+  category: musics
+  tags:
+    - Punk
+
+- id: 123
+  alias:
+  title: Manhattan Cruise
+  artists:
+    - Jazz Trio NY
+  duration: 217
+  category: musics
+  tags:
+    - Jazz
+
+- id: 124
+  alias:
+  title: Sweet Melody
+  artists:
+    - The Pop Stars
+  duration: 174
+  category: musics
+  tags:
+    - Pop
+
+- id: 125
+  alias:
+  title: Sub Zero
+  artists:
+    - Sub Low Frequency
+  duration: 209
+  category: musics
+  tags:
+    - Dubstep
+
+- id: 126
+  alias:
+  title: Sandy Boots
+  artists:
+    - Marina Sound
+  duration: 161
+  category: musics
+  tags:
+    - Chillout
+
+- id: 127
+  alias:
+  title: Vector Fields
+  artists:
+    - Cyber Pulse
+  duration: 166
+  category: musics
+  tags:
+    - Synthwave
+
+- id: 128
+  alias:
+  title: Starlight Dreamer
+  artists:
+    - Luna Eclipse
+  duration: 182
+  category: musics
+  tags:
+    - Dream Pop
+
+- id: 129
+  alias:
+  title: Sonic Boom
+  artists:
+    - The Rockers
+  duration: 221
+  category: musics
+  tags:
+    - Hard Rock
+
+- id: 130
+  alias:
+  title: Whispering Shadows
+  artists:
+    - The Ghost Project
+  duration: 214
+  category: musics
+  tags:
+    - Ambient
+
+- id: 131
+  alias:
+  title: Laser City
+  artists:
+    - Neon Shifters
+  duration: 181
+  category: musics
+  tags:
+    - Electronic
+
+- id: 132
+  alias:
+  title: Cold Winds
+  artists:
+    - Velvet Echoes
+  duration: 195
+  category: musics
+  tags:
+    - Alternative Rock
+
+- id: 133
+  alias:
+  title: Concrete Flow
+  artists:
+    - MC Lyricist
+  duration: 223
+  category: musics
+  tags:
+    - Hip-Hop
+
+- id: 134
+  alias:
+  title: Smooth Escape
+  artists:
+    - Soul Resonance
+  duration: 202
+  category: musics
+  tags:
+    - R&B
+
+- id: 135
+  alias:
+  title: Outrun the Sun
+  artists:
+    - The Nightwalkers
+  duration: 228
+  category: musics
+  tags:
+    - Retrowave
